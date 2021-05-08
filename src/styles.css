@@ -19,8 +19,8 @@ main {
   min-width: 400px;
   display: flex;
   justify-content: space-evenly;
-  border: 1px solid black;
-  background-color: #021b32;
+  /* border: 1px solid black; */
+  background-color: #02203c;
   color: white;
 }
 
@@ -50,7 +50,57 @@ main {
   height: 450px;
   width: 450px;
   min-width: 400px;
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.desc-container {
+  height: 80px;
+  width: 100%;
+  border: 1px solid red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.desc-input-container {
+  height: 40px;
+  width: 90%;
+  border: 1px solid green;
+  border-radius: 5px;
+}
+
+.desc-container span {
+  left: 20px;
+  top: 7px;
+  transform: scale(1.5);
+}
+
+.desc-input-container input {
+  width: 60%;
+  height: 20px;
+  border: none;
+  outline: none;
+  left: 50px;
+  top: 7px;
+}
+
+.desc-input-container button[type="submit"] {
+  right: 30px;
+  top: 12px;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  transform: scale(1.5);
+}
+
+.task-container {
+  height: 70%;
+  width: 100%;
+  border: 1px solid black;
 }
 
 /* Common Classes */
