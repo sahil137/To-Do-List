@@ -135,6 +135,16 @@ main {
   left: 35px;
 }
 
+.list-ul li.complete {
+  background-color: slategray;
+  color: white;
+  /* text-decoration: line-through; */
+}
+
+.list-ul li.complete p {
+  text-decoration: line-through;
+}
+
 .delete-task-btn {
   position: absolute;
   right: 0;
