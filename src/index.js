@@ -1,27 +1,16 @@
-// var taskList = document.getElementsByTagName("li"); // get all li
-// var item;
-// for (item = 0; item < taskList.length; item++) {
-//   // for loop to add bin icon to existing list items
-//   var span = document.createElement("span");
-//   var icon = document.createElement("i");
-//   span.className = "delete-task-btn";
-//   icon.className = "far fa-trash-alt";
-//   span.appendChild(icon);
-//   taskList[item].appendChild(span);
-// }
-
 function addTask(task) {
-  var list = document.getElementById("list-ul");
+  // function to add a task into the list
+  var list = document.getElementById("list-ul"); // get the unodered list
 
-  var newTask = document.createElement("li");
-  var newTaskP = document.createElement("p");
+  var newTask = document.createElement("li"); // create a li
+  var newTaskP = document.createElement("p"); // create the p tag for text
   var newTaskText = document.createTextNode(task);
 
-  newTaskP.appendChild(newTaskText);
+  newTaskP.appendChild(newTaskText); // add the text to p
 
-  var completeButton = document.createElement("button");
+  var completeButton = document.createElement("button"); // create button element for complete task action
   completeButton.classList.add("complete");
-  completeButton.addEventListener("click", completeTask);
+  completeButton.addEventListener("click", completeTask); // add evetn listener to the buttons craeted
 
   var span = document.createElement("span");
   span.classList.add("delete-task-btn");
@@ -30,8 +19,9 @@ function addTask(task) {
   icon.className = "far fa-trash-alt";
 
   span.appendChild(icon);
-  span.addEventListener("click", removeTask);
+  span.addEventListener("click", removeTask); // add event listenser to the delete logo / button
 
+  // append all the items to the li in the correct order
   newTask.appendChild(completeButton);
   newTask.appendChild(newTaskP);
   newTask.appendChild(span);
@@ -40,11 +30,13 @@ function addTask(task) {
 }
 
 function completeTask() {
+  // function to denote a completed task by
   var currTask = this;
   currTask.parentNode.classList.toggle("complete");
 }
 
 function removeTask() {
+  // function to remove task from the list
   var item = this.parentNode;
   var ul = item.parentNode;
 
@@ -59,6 +51,7 @@ document.getElementById("add-task-btn").addEventListener("click", function () {
     addTask(task);
     document.getElementById("add-task").value = "";
   } else {
+    // if task is empty show a prompt message
     window.alert("Please Enter a task");
   }
 });
