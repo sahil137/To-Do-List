@@ -53,29 +53,24 @@ main {
   height: 450px;
   width: 450px;
   min-width: 400px;
-  /* border: 1px solid blue; */
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
 }
 
 .desc-container {
   height: 80px;
   width: 100%;
-  /* border: 1px solid red; */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* background-color: black; */
+  background-color: darkgray;
 }
 
 .desc-input-container {
   height: 40px;
-  width: 90%;
-  /* border: 1px solid green; */
+  width: 100%;
   border-radius: 5px;
-  background-color: darkgray;
 }
 
 .desc-container span {
@@ -108,50 +103,61 @@ main {
   height: 70%;
   width: 100%;
   border: 1px solid black;
+  border-radius: 5px;
+  border-top: none;
   overflow: auto;
-  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
-    rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
-    rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
 }
-.list-ul {
+#list-ul {
   list-style: none;
   padding: 0;
   display: flex;
   flex-direction: column;
-  /* border: 1px solid red; */
 }
 
-.list-ul li {
+#list-ul li {
   position: relative;
   cursor: pointer;
   font-size: 18px;
   user-select: none;
-  /* margin: 10px; */
-  /* margin: 0; */
   padding: 12px 8px 12px 10px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
-.list-ul li:nth-child(odd) {
+#list-ul li:nth-child(odd) {
   background: #f9f9f9;
 }
-.list-ul li:hover {
+#list-ul li:hover {
   background: lightgray;
 }
 
-.list-ul li p {
+#list-ul li p {
   margin: 0;
   display: inline-block;
   position: absolute;
-  left: 35px;
+  left: 40px;
 }
 
-.list-ul li.complete {
+#list-ul li button {
+  cursor: pointer;
+  height: 20px;
+  width: 20px;
+  border: none;
+  background-color: white;
+  border-radius: 15px;
+  background-image: url("https://res.cloudinary.com/sbullkoft/image/upload/v1481411910/tick-128_v5o7dv.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+#list-ul li.complete button {
+  background-color: #9bd488;
+}
+
+#list-ul li.complete {
   background-color: slategray;
   color: white;
-  /* text-decoration: line-through; */
 }
 
-.list-ul li.complete p {
+#list-ul li.complete p {
   text-decoration: line-through;
 }
 
