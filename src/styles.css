@@ -87,12 +87,12 @@ main {
   border: none;
   outline: none;
   left: 50px;
-  top: 7px;
+  top: 9px;
 }
 
 .desc-input-container button[type="submit"] {
-  right: 30px;
-  top: 12px;
+  right: 20px;
+  top: 10px;
   cursor: pointer;
   outline: none;
   border: none;
@@ -104,18 +104,48 @@ main {
   height: 70%;
   width: 100%;
   border: 1px solid black;
+  overflow: auto;
 }
 .list-ul {
   list-style: none;
   padding: 0;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 
 .list-ul li {
   position: relative;
+  cursor: pointer;
   font-size: 18px;
   user-select: none;
-  margin: 5px;
+  /* margin: 10px; */
+  /* margin: 0; */
+  padding: 12px 8px 12px 10px;
+}
+.list-ul li:nth-child(odd) {
+  background: #f9f9f9;
+}
+.list-ul li:hover {
+  background: lightgray;
+}
+
+.list-ul li p {
+  margin: 0;
+  display: inline-block;
+  position: absolute;
+  left: 35px;
+}
+
+.delete-task-btn {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  padding: 10px;
+}
+
+.delete-task-btn:hover {
+  background-color: #f44336;
+  color: white;
 }
 
 /* Common Classes */
