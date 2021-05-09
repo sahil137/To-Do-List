@@ -62,17 +62,20 @@ main {
 .desc-container {
   height: 80px;
   width: 100%;
-  border: 1px solid red;
+  /* border: 1px solid red; */
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  /* background-color: black; */
 }
 
 .desc-input-container {
   height: 40px;
   width: 90%;
-  border: 1px solid green;
+  /* border: 1px solid green; */
   border-radius: 5px;
+  background-color: darkgray;
 }
 
 .desc-container span {
@@ -82,17 +85,18 @@ main {
 }
 
 .desc-input-container input {
-  width: 60%;
-  height: 20px;
+  width: 75%;
+  height: 25px;
   border: none;
   outline: none;
   left: 50px;
-  top: 9px;
+  top: 6px;
+  border-radius: 5px;
 }
 
 .desc-input-container button[type="submit"] {
   right: 20px;
-  top: 10px;
+  top: 12px;
   cursor: pointer;
   outline: none;
   border: none;
@@ -105,10 +109,15 @@ main {
   width: 100%;
   border: 1px solid black;
   overflow: auto;
+  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
+    rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
+    rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
 }
 .list-ul {
   list-style: none;
   padding: 0;
+  display: flex;
+  flex-direction: column;
   /* border: 1px solid red; */
 }
 
@@ -120,6 +129,7 @@ main {
   /* margin: 10px; */
   /* margin: 0; */
   padding: 12px 8px 12px 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 .list-ul li:nth-child(odd) {
   background: #f9f9f9;

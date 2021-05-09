@@ -56,12 +56,13 @@ var k;
 for (k = 0; k < checkBoxList.length; k++) {
   checkBoxList[k].addEventListener("click", function () {
     var j;
+    console.log(checkBoxList.length);
     // checkBoxList = document.getElementsByClassName("check-task");
     for (j = 0; j < checkBoxList.length; j++) {
       if (checkBoxList[j].checked === true) {
         checkBoxList[j].parentNode.classList.toggle("complete");
       } else {
-        checkBoxList[j].parentNode.classList.remove("complete");
+        checkBoxList[j].classList.remove("complete");
       }
     }
   });
